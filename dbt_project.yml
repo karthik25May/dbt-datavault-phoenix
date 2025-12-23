@@ -41,6 +41,8 @@ models:
     example:
       +materialized: table
     SENTHIL:
-      database: DBT_SENTHIL
+      +database: DBT_SENTHIL
+      +schema: SENTHIL
     PRABHA:
-      database: DBT_PRABHA
+      +database: DBT_PRABHA
+      +schema: PRABHA
