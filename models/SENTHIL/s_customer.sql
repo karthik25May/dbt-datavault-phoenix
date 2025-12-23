@@ -1,0 +1,7 @@
+{{
+    config(
+        materialized = 'view',
+        alias = 'customer'
+    )
+}}
+SELECT * FROM SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.CUSTOMER
