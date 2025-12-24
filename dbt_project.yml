@@ -46,4 +46,4 @@ models:
     PRABHA:
       +database: DBT_PRABHA
       +schema: PRABHA
-      +snowflake_warehouse: COMPUTE_WH
+      +snowflake_warehouse: LOADING
