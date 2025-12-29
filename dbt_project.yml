@@ -46,4 +46,5 @@ models:
     PRABHA:
       +database: DBT_PRABHA
       +schema: PRABHA
+      +materialized: table
     

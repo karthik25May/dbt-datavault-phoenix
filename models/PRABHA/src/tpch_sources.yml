@@ -8,3 +8,5 @@ sources:
       - name: CUSTOMER
       - name: ORDERS
       - name: PART
+      - name: LINEITEM
+      - name: SUPPLIER
