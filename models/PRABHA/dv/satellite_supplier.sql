@@ -1,8 +1,3 @@
-{{ config(
-    materialized='incremental',
-    unique_key='SUPPLIER_SAT_HK'
-) }}
-
 {{ automate_dv.sat(
     source_model='v_stg_supplier',
     src_pk='SUPPLIER_HK',

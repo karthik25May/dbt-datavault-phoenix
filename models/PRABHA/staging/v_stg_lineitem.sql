@@ -1,7 +1,7 @@
 {{ config(materialized='view') }}
 
 {%- set yaml_metadata -%}
-source_model: "raw_lineitem"
+source_model: "raw_line_item"
 
 derived_columns:
   RECORD_SOURCE: "!TPCH"
@@ -12,7 +12,6 @@ hashed_columns:
     columns:
       - L_ORDERKEY
       - L_LINENUMBER
-
   LINEITEM_HASHDIFF:
     is_hashdiff: true
     columns:

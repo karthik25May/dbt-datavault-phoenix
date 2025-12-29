@@ -4,7 +4,7 @@
 ) }}
 
 {{ automate_dv.hub(
-    source_model='stg_part',
+    source_model='v_stg_part',
     src_pk='PART_HK',
     src_nk='P_PARTKEY',
     src_ldts='LOAD_DATETIME',
