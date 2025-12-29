@@ -1,3 +1,8 @@
+{{ config(
+    materialized='incremental',
+    unique_key='ORDER_HASHDIFF'
+) }}
+
 {{ automate_dv.sat(
     source_model='v_stg_orders',
     src_pk='ORDER_HK',

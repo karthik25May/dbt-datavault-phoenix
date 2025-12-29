@@ -1,3 +1,8 @@
+{{ config(
+    materialized='incremental',
+    unique_key='LINEITEM_HASHDIFF'
+) }}
+
 {{ automate_dv.sat(
     source_model='v_stg_lineitem',
     src_pk='LINEITEM_HK',

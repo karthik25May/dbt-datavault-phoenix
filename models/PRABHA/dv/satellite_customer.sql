@@ -1,3 +1,8 @@
+{{ config(
+    materialized='incremental',
+    unique_key='CUSTOMER_HASHDIFF'
+) }}
+
 {{ automate_dv.sat(
     source_model='v_stg_cust',
     src_pk='CUSTOMER_HK',
