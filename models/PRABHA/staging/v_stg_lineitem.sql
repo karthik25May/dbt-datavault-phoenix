@@ -12,6 +12,19 @@ hashed_columns:
     columns:
       - L_ORDERKEY
       - L_LINENUMBER
+  SUPPLIER_HK: "L_SUPPKEY"
+  PART_HK: "L_PARTKEY"
+  ORDER_HK: "L_ORDERKEY"
+  LINEITEM_SUPPLIER_HK:
+    columns:
+      - L_ORDERKEY
+      - L_LINENUMBER
+      - L_SUPPKEY
+  LINEITEM_PART_HK:
+    columns:
+      - L_ORDERKEY
+      - L_LINENUMBER
+      - L_PARTKEY
   LINEITEM_HASHDIFF:
     is_hashdiff: true
     columns:
