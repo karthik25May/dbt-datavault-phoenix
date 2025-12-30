@@ -9,6 +9,8 @@
     src_hashdiff='LINEITEM_HASHDIFF',
     src_payload=[
         'L_QUANTITY',
+        'L_ORDERKEY',
+        'L_PARTKEY',
         'L_EXTENDEDPRICE',
         'L_DISCOUNT',
         'L_TAX',

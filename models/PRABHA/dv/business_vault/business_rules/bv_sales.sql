@@ -22,4 +22,5 @@ SELECT
 
 FROM {{ ref('link_order_product') }} l
 JOIN {{ ref('satellite_lineitem') }} s
-  ON l.order_product_hk = s.ORDER_PRODUCT_HK
+  ON (s.l_orderkey = l.order_hk and 
+  s.l_partkey = l.product_hk)

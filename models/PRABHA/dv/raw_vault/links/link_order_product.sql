@@ -11,8 +11,8 @@ SELECT
     ) AS order_product_hk,
 
     -- Hub keys
-    HASH(l_orderkey)  AS order_hk,
-    HASH(l_partkey) AS product_hk,
+    l_orderkey  AS order_hk,
+    l_partkey AS product_hk,
 
     CURRENT_TIMESTAMP() AS load_dts,
     'SRC_ORDERS' AS record_source
