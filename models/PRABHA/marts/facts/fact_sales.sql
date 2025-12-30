@@ -1,6 +1,6 @@
 SELECT
-    order_hk as order_id,
-    product_hk as product,
+    order_hk,
+    product_hk,
     l_quantity AS quantity,
     l_extendedprice AS price,
 
@@ -15,4 +15,9 @@ SELECT
     END AS order_category,
 
     CURRENT_DATE AS snapshot_date
-FROM {{ ref('bv_sales') }}
+FROM {{ ref('bv_sales') }} l
+
+-- PIT ensures latest record only
+JOIN {{ ref('pit_lineitem') }} p
+  ON l.lineitem_hk = p.lineitem_hk
+  AND l.LOAD_DATETIME = p.last_load_dts

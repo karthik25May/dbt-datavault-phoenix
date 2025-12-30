@@ -9,10 +9,12 @@ derived_columns:
 
 hashed_columns:
   LINEITEM_HK:
+    is_hashdiff: true
     columns:
       - L_ORDERKEY
       - L_LINENUMBER
   ORDER_PRODUCT_HK:
+    is_hashdiff: true
     columns:
       - L_ORDERKEY
       - L_PARTKEY
@@ -20,11 +22,13 @@ hashed_columns:
   PART_HK: "L_PARTKEY"
   ORDER_HK: "L_ORDERKEY"
   LINEITEM_SUPPLIER_HK:
+    is_hashdiff: true
     columns:
       - L_ORDERKEY
       - L_LINENUMBER
       - L_SUPPKEY
   LINEITEM_PART_HK:
+    is_hashdiff: true
     columns:
       - L_ORDERKEY
       - L_LINENUMBER

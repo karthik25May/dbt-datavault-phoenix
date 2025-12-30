@@ -1,4 +1,5 @@
 SELECT
+    s.lineitem_hk,
     l.order_hk,
     l.product_hk,
     s.l_quantity,

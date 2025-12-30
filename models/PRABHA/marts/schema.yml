@@ -1,0 +1,69 @@
+version: 2
+
+models:
+  - name: dim_product
+    description: "Product dimension table built from hub and satellite"
+
+    tests:
+      # Table-level tests
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - part_key
+
+    columns:
+      - name: part_key
+        description: "Surrogate hash key for product"
+        tests:
+          - not_null
+          - unique
+
+      - name: product_name
+        description: "Name of the product"
+        tests:
+          - not_null
+
+      - name: category
+        description: "Product category"
+        tests:
+          - not_null
+
+      - name: brand
+        description: "Product brand"
+        tests:
+          - not_null
+
+  - name: fact_sales
+    description: "Fact table containing sales transactions"
+
+    tests:
+      # Each row should be uniquely identified
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - order_hk
+            - product_hk
+
+    columns:
+      - name: order_hk
+        description: "Order hash key"
+        tests:
+          - not_null
+
+      - name: product_hk
+        description: "Product hash key"
+        tests:
+          - not_null
+
+      - name: quantity
+        description: "Quantity sold"
+        tests:
+          - not_null
+
+      - name: net_amount
+        description: "Final revenue after business rules"
+        tests:
+          - not_null
+
+      - name: snapshot_date
+        description: "Fact snapshot date"
+        tests:
+          - not_null
