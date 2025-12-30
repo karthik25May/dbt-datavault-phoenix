@@ -11,7 +11,9 @@
         'L_QUANTITY',
         'L_EXTENDEDPRICE',
         'L_DISCOUNT',
-        'L_TAX'
+        'L_TAX',
+        'L_RETURNFLAG',
+        'ORDER_PRODUCT_HK'
     ],
     src_ldts='LOAD_DATETIME',
     src_source='RECORD_SOURCE'

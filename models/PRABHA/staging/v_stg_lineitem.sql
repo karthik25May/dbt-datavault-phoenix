@@ -12,6 +12,10 @@ hashed_columns:
     columns:
       - L_ORDERKEY
       - L_LINENUMBER
+  ORDER_PRODUCT_HK:
+    columns:
+      - L_ORDERKEY
+      - L_PARTKEY
   SUPPLIER_HK: "L_SUPPKEY"
   PART_HK: "L_PARTKEY"
   ORDER_HK: "L_ORDERKEY"
